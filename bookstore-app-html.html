@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookReads - Your Online Bookstore</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/modals.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-book-open"></i>
+                    <span>BookReads</span>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search books, authors, genres...">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                <div class="user-actions" id="userActionsGuest">
+                    <button id="loginBtn" class="btn btn-outline">Login</button>
+                    <button id="registerBtn" class="btn btn-primary">Register</button>
+                </div>
+                <div class="user-actions user-profile" id="userActionsLoggedIn" style="display: none;">
+                    <div class="notifications">
+                        <i class="fas fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <div class="profile-dropdown">
+                        <div class="profile-pic">
+                            <img src="images/avatar-placeholder.jpg" alt="Profile">
+                        </div>
+                        <div class="dropdown-content">
+                            <a href="#" class="dropdown-item"><i class="fas fa-user"></i> My Profile</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-book"></i> My Library</a>
+                            <a href="#" class="dropdown-item"><i class="fas fa-cog"></i> Settings</a>
+                            <a href="#" class="dropdown-item" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul class="main-nav">
+                <li><a href="#" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#"><i class="fas fa-fire"></i> Trending</a></li>
+                <li><a href="#"><i class="fas fa-star"></i> New Releases</a></li>
+                <li class="dropdown">
+                    <a href="#"><i class="fas fa-list"></i> Genres <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#">Mystery & Thriller</a>
+                        <a href="#">Romance</a>
+                        <a href="#">Science Fiction</a>
+                        <a href="#">Fantasy</a>
+                        <a href="#">Non-Fiction</a>
+                        <a href="#">Literary Fiction</a>
+                        <a href="#">See All Genres</a>
+                    </div>
+                </li>
+                <li><a href="#"><i class="fas fa-bookmark"></i> Reading Lists</a></li>
+                <li><a href="#"><i class="fas fa-book"></i> My Library</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Discover Your Next Favorite Book</h1>
+                <p>Explore thousands of books, track your reading progress, and connect with fellow book lovers.</p>
+                <button class="btn btn-primary btn-large">Start Exploring</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Trending Books -->
+        <section class="book-section">
+            <div class="section-heading">
+                <h2><i class="fas fa-fire"></i> Trending Books</h2>
+                <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="book-slider" id="trendingBooks">
+                <!-- Books will be inserted here by JavaScript -->
+            </div>
+        </section>
+        
+        <!-- New Releases -->
+        <section class="book-section">
+            <div class="section-heading">
+                <h2><i class="fas fa-star"></i> New Releases</h2>
+                <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="book-slider" id="newReleases">
+                <!-- Books will be inserted here by JavaScript -->
+            </div>
+        </section>
+        
+        <!-- Genres -->
+        <section class="book-section">
+            <div class="section-heading">
+                <h2><i class="fas fa-list"></i> Browse by Genre</h2>
+                <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="genre-grid" id="genreGrid">
+                <!-- Genres will be inserted here by JavaScript -->
+            </div>
+        </section>
+        
+        <!-- Recommended Books -->
+        <section class="book-section">
+            <div class="section-heading">
+                <h2><i class="fas fa-thumbs-up"></i> Recommended For You</h2>
+                <a href="#" class="view-all">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="book-slider" id="recommendedBooks">
+                <!-- Books will be inserted here by JavaScript -->
+            </div>
+        </section>
+    </main>
+    
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Stay Updated</h2>
+                    <p>Subscribe to our newsletter to get updates on new releases, reading recommendations, and special offers.</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About BookReads</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Mission</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Help & Support</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Report an Issue</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Discover</h3>
+                    <ul>
+                        <li><a href="#">Book Lists</a></li>
+                        <li><a href="#">Reading Challenges</a></li>
+                        <li><a href="#">Book Clubs</a></li>
+                        <li><a href="#">Author Interviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="#"><i class="far fa-envelope"></i> Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BookReads. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <h2>Login to BookReads</h2>
+                <p>Welcome back! Please login to your account.</p>
+            </div>
+            <div class="social-login">
+                <button class="social-btn google-btn"><i class="fab fa-google"></i> Login with Google</button>
+                <button class="social-btn facebook-btn"><i class="fab fa-facebook-f"></i> Login with Facebook</button>
+            </div>
+            <div class="divider">
+                <span>OR</span>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <div class="input-icon">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <span class="error-message" id="emailError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" name="password" required>
+                        <i class="far fa-eye toggle-password"></i>
+                    </div>
+                    <span class="error-message" id="passwordError"></span>
+                </div>
+                <div class="form-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="rememberMe">
+                        <label for="rememberMe">Remember me</label>
+                    </div>
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+                <div class="form-footer">
+                    <p>Don't have an account? <a href="#" id="switchToRegister">Register</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <h2>Create Account</h2>
+                <p>Join BookReads and discover your next favorite book!</p>
+            </div>
+            <div class="social-login">
+                <button class="social-btn google-btn"><i class="fab fa-google"></i> Register with Google</button>
+                <button class="social-btn facebook-btn"><i class="fab fa-facebook-f"></i> Register with Facebook</button>
+            </div>
+            <div class="divider">
+                <span>OR</span>
+            </div>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <div class="input-icon">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    <span class="error-message" id="fullNameError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="regEmail">Email</label>
+                    <div class="input-icon">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="regEmail" name="regEmail" required>
+                    </div>
+                    <span class="error-message" id="regEmailError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">Password</label>
+                    <div class="input-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="regPassword" name="regPassword" required>
+                        <i class="far fa-eye toggle-password"></i>
+                    </div>
+                    <span class="error-message" id="regPasswordError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="input-icon">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        <i class="far fa-eye toggle-password"></i>
+                    </div>
+                    <span class="error-message" id="confirmPasswordError"></span>
+                </div>
+                <div class="form-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="agreeTerms" required>
+                        <label for="agreeTerms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+                <div class="form-footer">
+                    <p>Already have an account? <a href="#" id="switchToLogin">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Book Details Modal -->
+    <div id="bookDetailsModal" class="modal book-details-modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="book-details" id="bookDetailsContent">
+                <!-- Book details will be inserted here by JavaScript -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Success Toast -->
+    <div id="successToast" class="toast">
+        <div class="toast-content">
+            <i class="fas fa-check-circle"></i>
+            <div class="toast-message" id="successMessage"></div>
+        </div>
+        <div class="toast-progress"></div>
+    </div>
+    
+    <script src="js/data.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
