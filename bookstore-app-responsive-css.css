@@ -1,0 +1,240 @@
+/* Responsive Styles */
+
+/* Large Tablets */
+@media (max-width: 992px) {
+    .book-slider {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+    
+    .newsletter-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .newsletter-text {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .book-details-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .book-details-cover {
+        margin-bottom: 20px;
+    }
+    
+    .book-details-meta {
+        justify-content: center;
+    }
+    
+    .book-details-actions {
+        justify-content: center;
+    }
+}
+
+/* Medium Tablets */
+@media (max-width: 768px) {
+    .header-content {
+        flex-wrap: wrap;
+    }
+    
+    .logo {
+        margin-bottom: 10px;
+    }
+    
+    .search-bar {
+        order: 3;
+        margin: 15px 0 0;
+        max-width: 100%;
+    }
+    
+    .main-nav {
+        overflow-x: auto;
+        white-space: nowrap;
+        justify-content: flex-start;
+        padding-bottom: 5px;
+    }
+    
+    .main-nav::-webkit-scrollbar {
+        height: 0;
+    }
+    
+    .hero {
+        height: 350px;
+    }
+    
+    .hero h1 {
+        font-size: 32px;
+    }
+    
+    .hero p {
+        font-size: 16px;
+    }
+    
+    .book-slider {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    }
+    
+    .genre-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    
+    .modal-content {
+        padding: 25px;
+    }
+    
+    .tab-links {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    .tab-link {
+        padding: 10px 15px;
+    }
+}
+
+/* Small Tablets & Large Phones */
+@media (max-width: 576px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .search-bar {
+        margin: 15px 0;
+    }
+    
+    .user-actions {
+        margin-top: 10px;
+    }
+    
+    .hero {
+        height: 300px;
+    }
+    
+    .hero h1 {
+        font-size: 28px;
+    }
+    
+    .hero p {
+        font-size: 14px;
+    }
+    
+    .book-slider {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+    
+    .book-cover {
+        height: 200px;
+    }
+    
+    .book-title {
+        font-size: 14px;
+        height: 42px;
+    }
+    
+    .section-heading h2 {
+        font-size: 20px;
+    }
+    
+    .newsletter {
+        padding: 40px 0;
+    }
+    
+    .newsletter-text h2 {
+        font-size: 24px;
+    }
+    
+    .newsletter-text p {
+        font-size: 14px;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .newsletter-form input {
+        border-radius: 4px;
+        margin-bottom: 10px;
+    }
+    
+    .newsletter-form button {
+        border-radius: 4px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-column a {
+        justify-content: center;
+    }
+    
+    .modal-content {
+        padding: 20px;
+    }
+    
+    .social-login {
+        flex-direction: column;
+    }
+    
+    .book-details-title {
+        font-size: 24px;
+    }
+    
+    .book-details-author {
+        font-size: 16px;
+    }
+    
+    .review-item {
+        flex-direction: column;
+    }
+    
+    .review-avatar {
+        margin-bottom: 10px;
+    }
+}
+
+/* Small Phones */
+@media (max-width: 400px) {
+    .hero h1 {
+        font-size: 24px;
+    }
+    
+    .book-slider {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+    
+    .book-cover {
+        height: 180px;
+    }
+    
+    .genre-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-options {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .remember-me {
+        margin-bottom: 10px;
+    }
+    
+    .book-details-actions {
+        flex-direction: column;
+    }
+    
+    .book-details-actions .btn {
+        width: 100%;
+    }
+}
